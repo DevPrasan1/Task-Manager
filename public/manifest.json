@@ -1,0 +1,8 @@
+{
+  "name": "Task-Manager",
+  "short_name": "Task-Manager",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#dcdcdc",
+  "theme_color": "#dcdcdc"
+}

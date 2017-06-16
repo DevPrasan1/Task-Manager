@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tasks Manager</title>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Weather PWA">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head> 
+<body style="background-color: #dcdcdc">
+   <div style="">
+    <nav role="navigation" class="navbar navbar-inverse">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Tasks Manager</a>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+           
+            <ul class="nav navbar-nav navbar-right">
+               
+                 <li class="dropdown">
+                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Boards <b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="#">coVeda</a></li>
+                        <li><a href="#">Dev Work</a></li>
+                        <li><a href="#">Independent Task</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Create New Board</a></li>
+                    </ul>   
+                </li>
+                 <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="cardNameText" placeholder="Add a New Card">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" onclick="addNewCardToBoard()">Add</button>
+                    </span>
+                </div>
+    </nav>
+    </div>
+    <div style="width:94%;margin-left: 3%;">
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title" >My Board</h1>
+            </div>
+    </div>
+        <div class="row">
+        <div id="cardTemplate" class="col-md-3 col-sm-3" hidden>
+        <div class="panel panel-default" style="border: solid #ebebeb;">
+            <div class="panel-heading">
+                <h1 class="panel-title">My Card</h1>
+            </div>
+            <div  class="task">
+
+
+            </div>
+            <div class="panel-body" style="border: solid #dcdcdc">
+                <div class="input-group">
+                    <textarea class="form-control" rows="1" placeholder="Enter Task"></textarea>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" onclick="addNewTaskToBoard(this.id)">Add</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div> 
+
+         <div id="taskTemplate" class="panel-body" style="border: solid #dcdcdc" hidden>
+                    This is my Task.
+         </div>
+         
+     </div>
+
+     </div>
+
+</body>
+<script type="text/javascript" src="./task.js"></script>
+</html>                                		
